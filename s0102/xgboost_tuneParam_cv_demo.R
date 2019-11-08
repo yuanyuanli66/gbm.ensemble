@@ -7,7 +7,7 @@ args = commandArgs(trailingOnly=TRUE)
 # This is a refined search around best parameter combo from grid1
 #
 # yuanyuan.li@nih.gov
-# created : 08-28-2017
+# created : 11-06-2019
 # ******************************************************************
 options("expressions"=500000) #max no. nested iterations
 require(caret)

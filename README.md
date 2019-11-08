@@ -3,7 +3,7 @@
 ## Installation
 Make sure you have R 3.4 or newer. 
  
-You can install ``caret``, ``xgboost``,``MLmetrics``,``data.table``,``vcd``, and ``e1071`` packages installed under R. 
+You can install ``caret``, ``xgboost``,``MLmetrics``,``data.table``,``vcd``, and ``e1071`` packages under R. 
  
 The following pipeline runs on Linux (or Linux-like) environment using a Makefile. 
  
