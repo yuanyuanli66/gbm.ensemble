@@ -26,8 +26,9 @@ in_loc_02="$gb_loc/s0101/"
 in_name_02="common_tcga_singlecell_tnbc_std_trn"
 
 # Starting & ending index of parameter combo
+#  - If want to run on multiple servers, specify start & end index in the local shell script file
 idx_start="1"
-idx_end="1344"  # can be smaller if want to run into multiple batches on seperate computers
+idx_end="25"   # 25 parameter combos in the current demo
 num_thread_02="64" # number of threads for parallel execution
 
 

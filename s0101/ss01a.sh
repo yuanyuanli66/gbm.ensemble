@@ -6,6 +6,8 @@
 ##################################################################
 source ../env_var.sh
 
+echo "mkdir $gb_loc"       # make output folder
+
 l_dir=${PWD##*/}           # get current subfolder name
 out_loc="$gb_loc/$l_dir/"  # set output subfolder
 echo "mkdir $out_loc"      # make output subfolder
