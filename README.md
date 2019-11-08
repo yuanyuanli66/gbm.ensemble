@@ -1,4 +1,4 @@
-# Predict tumor purities using TCGA RNAseq data
+# Tumor purity prediction using TCGA RNAseq data
 This is a small demo based on using TCGA's Tripple Negative Breast Cancer (TNBC) RNA-seq to build 
 an ensemble of gradient boosting machines and use the enseble model to predict tumor purities in 
 TNBC single-cell data.  
