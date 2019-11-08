@@ -46,7 +46,7 @@ nfold="10"       # k-fold cv
 #nrepeats="100"   # repeated cross-validation
 nrepeats="10"   # repeated cross-validation (faster)
 #ntrees="5000"   # max number of boosted trees
-ntrees="500"     # max number of boosted trees (faster)
+ntrees="100"     # max number of boosted trees (faster)
 nstop="5"        # early stopping criteria
 seed="1000"      # starting seed number
 

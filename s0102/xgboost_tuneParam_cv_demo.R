@@ -31,7 +31,7 @@ MAX_LBL=0.9975 # Make sure never == 1
 seed_num=998
 nfold=10       # k-fold cv
 #ntrees=5000    # max num of boosted trees
-ntrees=500    # max num of boosted trees
+ntrees=100    # max num of boosted trees (faster)
 nstop=5        # early stopping criteria
 
 
