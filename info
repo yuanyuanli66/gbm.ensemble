@@ -1,19 +1,34 @@
-All programs are resides in s01xx subfolders. 
+- env_var.sh file contains all environmental variables for this pipeline. 
+     - please modify this file for classpath, filenames, and model parameters
 
-The following is the pipeline to 
+- Makefile file contains execution instructions for each step
 
-tb_loc=./
-db_loc=./input/
-gb_loc=./output/
+- All R programs reside in s01xx subfolders 
+
+- Input files reside in ./input subfolders
+
+- Output files from each step reside in ./output/s01xx subfolders
 
 *******s0100: Single cell purity prediction for BRCA triple negative ***********
 ** s0101 -> Step1: Data preprocessing
-            - Standardize TCGA's bulk RNAseq data together with single cell data 
-            - User TCGA's bulk RNAseq as training & single cell as testing
-** s0102 -> Step2: Parameter tuning for the xgboost model from training data
-            - Find the best parameter combo from an intial set of parameters
-            - Refine the parameter search grid around the current best parameter combo to see if we can do better  
-** s0103 -> Run xgboost using all bulk RNAseq data as training & predict single cell's purity
-** s0104 -> Create leave-one-out cross validation sets
-** s0105 -> Run xgboost using LOO cross-validation sets
- 
+            - Use TCGA's bulk RNAseq as training & single cell as testing
+            - Standardize training & testing data 
+            - Map TCGA's bulk RNAseq data with available tumor purity estimates
+
+** s0102 -> Step2 (optional): Parameter tuning for the xgboost model from training data
+            - Find best parameter combo using a grid search (this is a much smaller grid for demo purposes)
+            
+            #- Find the best parameter combo from an initial set of parameters
+            #- Refine the parameter search grid around the current best parameter combo to see if we can do better  
+
+** s0103 -> Step3: Predict tumor purity for the test set (single cell)
+            - Build an ensemble of GBM models using TCGA bulk RNAseq data
+            - Predict test set samples using each model
+            - Calculated final predictions by using the average of all predictions 
+
+
+
+
+
+
+
