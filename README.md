@@ -43,8 +43,15 @@ Note: The step 2: ``make  findXgbParamTNBCbulkRNAandSingleCell | bash`` is optio
 This step may take a long time. You can skip this step and go to the prediction (step 3) directly.
  
  
- 
- 
+## Running this pipeline with your own gene expression data
+You will need to download the TCGA RNAseq data for your tumor type. 
+In the ``./input`` subfolder,  you need to generate your own ``.value`` and ``.label`` files in the 
+same format as ``common_tcga_singlecell_tnbc.value`` and ``common_tcga_singlecell_tnbc.label`` files. 
+
+ * ``.value`` file contains the gene name and gene expression values of both TCGA RNAseq data and your gene expression data that you want to predict
+
+ * ``.label`` file contains the TCGA sample ID (minimum of 16 characters) and your expression data sample ID and a column of integers (can be any)
+
  
 
 
