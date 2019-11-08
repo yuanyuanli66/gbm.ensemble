@@ -18,14 +18,14 @@ echo "rm $out_loc/*"
 
 
 
-# A small grid search via cross-validation of the training data
-echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv_demo.R  $in_loc_02  $in_name_02 $idx_start $idx_end $num_thread_02 $out_loc > $out_loc/output.log  2>&1 &"
+# A small grid search via cross-validation of the training data (demo grid size 25 with 500 max boosts)
+echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv_demo.R  $in_loc_s02  $in_name_s02 $idx_start $idx_end $num_thread_s02 $out_loc > $out_loc/output.log  2>&1 &"
 
-# A initial grid search via cross-validation of the training data
-#echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv.R  $in_loc_02  $in_name_02 $idx_start $idx_end $num_thread_02 $out_loc > $out_loc/output.log  2>&1 &"
+# A initial grid search via cross-validation of the training data (initial grid size 1344 with 5000 max boosts)
+#echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv.R  $in_loc_s02  $in_name_s02 $idx_start $idx_end $num_thread_s02 $out_loc > $out_loc/output.log  2>&1 &"
 
-# A refined grid search using the best parameter combo from the initial step
-#echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv_refined.R  $in_loc_02 $in_name_02 $idx_start $idx_end $num_thread_02 $out_loc > $out_loc/output.log  2>&1 &"
+# A refined grid search using the best parameter combo from the initial step (refined grid size 143 with 5000 max boosts)
+#echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv_refined.R  $in_loc_s02 $in_name_s02 $idx_start $idx_end $num_thread_s02 $out_loc > $out_loc/output.log  2>&1 &"
 
 
 

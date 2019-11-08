@@ -24,8 +24,12 @@ idx_end="143"   # can be smaller if want to run into multiple batches
 num_thread="64" # number of threads for parallel execution
 
 
-# Cross validation for refined grid search 
-echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv_refined.R  $in_loc $in_name $idx_start $idx_end $num_thread $out_loc > $out_loc/output.log  2>&1 &"
+
+# A initial grid search via cross-validation of the training data
+#echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv.R  $in_loc_s02  $in_name_s02 $idx_start $idx_end $num_thread_s02 $out_loc > $out_loc/output.log  2>&1 &"
+
+# A refined grid search using the best parameter combo from the initial step
+echo "nohup Rscript --no-save --no-restore --verbose --max-ppsize=500000 xgboost_tuneParam_cv_refined.R  $in_loc_s02 $in_name_s02 $idx_start $idx_end $num_thread_s02 $out_loc > $out_loc/output.log  2>&1 &"
 
 
 
