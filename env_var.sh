@@ -44,9 +44,9 @@ num_thread_s03="64" # number of threads for parallel execution
 
 nfold="10"       # k-fold cv
 #nrepeats="100"   # repeated cross-validationc (10x100=1000 models)
-nrepeats="10"   # repeated cross-validation (faster)
+nrepeats="10"   # repeated cross-validation (10x10=100 models)
 #ntrees="5000"   # max number of boosted trees
-ntrees="100"     # max number of boosted trees (faster)
+ntrees="20"     # max number of boosted trees (faster)
 nstop="5"        # early stopping criteria
 seed="1000"      # starting seed number
 
