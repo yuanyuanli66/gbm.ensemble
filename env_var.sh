@@ -22,17 +22,26 @@ tcga_pur="tcga_array_sample_purity.txt"
 
 #------- s0102 parameters ---------
 # location and name of the training file
-in_loc_02="$gb_loc/s0101/"
-in_name_02="common_tcga_singlecell_tnbc_std_trn"
+in_loc_s02="$gb_loc/s0101/"
+in_name_s02="common_tcga_singlecell_tnbc_std_trn"
 
 # Starting & ending index of parameter combo
-#  - If want to run on multiple servers, specify start & end index in the local shell script file
+#  - If want to run on multiple servers, do
+#     - duplicate local shell script file in s0102 for each server (>cp ss01a ss02a)
+#     - specify start & end index of combos to run on that server
+#     - update Makefile 
 idx_start="1"
+#idx_end="1344"   
 idx_end="25"   # 25 parameter combos in the current demo
 num_thread_02="64" # number of threads for parallel execution
 
 
 #------- s0103 parameters ---------
+in_loc_s03="$gb_loc/s0101/"
+in_name_s03="common_tcga_singlecell_tnbc_std"
+num_thread_s03="64" # number of threads for parallel execution
+
+
 nfold="10"       # k-fold cv
 #nrepeats="100"   # repeated cross-validation
 nrepeats="10"   # repeated cross-validation (faster)
