@@ -32,8 +32,8 @@ num_thread_s02="64" # number of threads for parallel execution
 #     - specify start & end index of combos to run on that server
 #     - update Makefile 
 idx_start="1"
-idx_end="25"   # 25 parameter combos in the current demo
-#idx_end="1344"   
+idx_end="25"    # 25 parameter combos in the small demo
+#idx_end="1344" # 1344 parameter combos in the initial grid search  
 
 
 #------- s0103 parameters ---------
@@ -43,7 +43,7 @@ num_thread_s03="64" # number of threads for parallel execution
 
 
 nfold="10"       # k-fold cv
-#nrepeats="100"   # repeated cross-validation
+#nrepeats="100"   # repeated cross-validationc (10x100=1000 models)
 nrepeats="10"   # repeated cross-validation (faster)
 #ntrees="5000"   # max number of boosted trees
 ntrees="100"     # max number of boosted trees (faster)
@@ -51,7 +51,7 @@ nstop="5"        # early stopping criteria
 seed="1000"      # starting seed number
 
 
-# best parameter combo found based on step 2
+# best parameter combo found in step 2
 max_depth="6"            # max tree depth
 min_cw="10"              # min leaf weight
 eta="0.01"               # learning rate
@@ -62,7 +62,7 @@ subsample="0.40"         # percentage of samples used
 
 
 
-#----- others: TCGA tumor code -------
+#----- misc: TCGA tumor code -------
 all_tum_lst=("acc" "blca" "brca" "cesc" "chol" "coad" "dlbc" "esca" 
              "gbm" "hnsc" "kich" "kirc" "kirp" "laml" "lgg" "lihc" 
              "luad" "lusc" "meso" "ov" "paad" "pcpg" "prad" "read" 
