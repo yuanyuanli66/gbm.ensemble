@@ -1,15 +1,15 @@
 ##################################################################
 # s0101.sh Single cell purity prediction for BRCA triple negative
-# - standardize data
-# - creat traning & testing data sets 
+#   - creat traning & testing data sets 
+#   - standardize data
+#   - get avaliable TCGA tumor purity estimates for TCGA RNAseq data
 ##################################################################
 source ../env_var.sh
 
-l_dir=${PWD##*/}
-out_loc="$gb_loc/$l_dir/"
-echo "mkdir $out_loc"
-#echo "rm $out_loc/*"
-
+l_dir=${PWD##*/}           # get current subfolder name
+out_loc="$gb_loc/$l_dir/"  # set output subfolder
+echo "mkdir $out_loc"      # make output subfolder
+echo "rm $out_loc/*"       # remove pre-existing files in the output subfolder
 
 
 #---------- preprocess data ---------

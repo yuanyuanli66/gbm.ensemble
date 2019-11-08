@@ -1,7 +1,10 @@
-#------- set path ---------
-tb_loc="~/your_path/gbm.ensemble-master/"        # code path
-db_loc="~/your_path/gbm.ensemble-master/input/"  # input path
-gb_loc="~/your_path/gbm.ensemble-master/output/" # output path
+#------- set classpath ---------
+#tb_loc="~/your_path/gbm.ensemble-master/"        # code path
+#db_loc="~/your_path/gbm.ensemble-master/input/"  # input path
+#gb_loc="~/your_path/gbm.ensemble-master/output/" # output path
+tb_loc="~/gt/gbm.ensemble-master/"        # code path
+db_loc="~/gt/gbm.ensemble-master/input/"  # input path
+gb_loc="~/gt/gbm.ensemble-master/output/" # output path
 
 
 #------- s0101 parameters ---------
@@ -14,6 +17,18 @@ num_tcga_sample="134"
 # TCGA tumor purity 
 #   - Reference: [Hoadley, et al, Cell, 2018]
 tcga_pur="tcga_array_sample_purity.txt"
+
+
+
+#------- s0102 parameters ---------
+# location and name of the training file
+in_loc_02="$gb_loc/s0101/"
+in_name_02="common_tcga_singlecell_tnbc_std_trn"
+
+# Starting & ending index of parameter combo
+idx_start="1"
+idx_end="1344"  # can be smaller if want to run into multiple batches on seperate computers
+num_thread_02="64" # number of threads for parallel execution
 
 
 #------- s0103 parameters ---------
