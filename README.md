@@ -48,9 +48,10 @@ You will need to download the TCGA RNAseq data for your tumor type.
 In the ``./input`` subfolder,  you need to generate your own ``.value`` and ``.label`` files in the 
 same format as ``common_tcga_singlecell_tnbc.value`` and ``common_tcga_singlecell_tnbc.label`` files. 
 
- * ``.value`` file contains the gene name and gene expression values of both TCGA RNAseq data and your gene expression data that you want to predict
+ * ``.value`` file contains the gene name and gene expression values of both TCGA RNAseq data and your gene expression data that you want to predict. 
+ Each row is a gene, and each column is a sample. Your gene expression data should always come after the TCGA RNAseq data. 
 
- * ``.label`` file contains the TCGA sample ID (minimum of 16 characters) and your expression data sample ID and a column of integers (can be any)
+ * ``.label`` file contains 2 columns: column 1 is the sample ID name. The TCGA sample ID (minimum of 16 characters) followed by your expression data sample ID. Column 2 is integers vector (can be any number). These numbers will be with TCGA purity values during the step 1 in the pipeline.  
 
  
 
