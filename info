@@ -1,0 +1,19 @@
+All programs are resides in s01xx subfolders. 
+
+The following is the pipeline to 
+
+tb_loc=./
+db_loc=./input/
+gb_loc=./output/
+
+*******s0100: Single cell purity prediction for BRCA triple negative ***********
+** s0101 -> Step1: Data preprocessing
+            - Standardize TCGA's bulk RNAseq data together with single cell data 
+            - User TCGA's bulk RNAseq as training & single cell as testing
+** s0102 -> Step2: Parameter tuning for the xgboost model from training data
+            - Find the best parameter combo from an intial set of parameters
+            - Refine the parameter search grid around the current best parameter combo to see if we can do better  
+** s0103 -> Run xgboost using all bulk RNAseq data as training & predict single cell's purity
+** s0104 -> Create leave-one-out cross validation sets
+** s0105 -> Run xgboost using LOO cross-validation sets
+ 
