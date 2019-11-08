@@ -24,6 +24,7 @@ tcga_pur="tcga_array_sample_purity.txt"
 # location and name of the training file
 in_loc_s02="$gb_loc/s0101/"
 in_name_s02="common_tcga_singlecell_tnbc_std_trn"
+num_thread_s02="64" # number of threads for parallel execution
 
 # Starting & ending index of parameter combo
 #  - If want to run on multiple servers, do
@@ -31,9 +32,8 @@ in_name_s02="common_tcga_singlecell_tnbc_std_trn"
 #     - specify start & end index of combos to run on that server
 #     - update Makefile 
 idx_start="1"
-#idx_end="1344"   
 idx_end="25"   # 25 parameter combos in the current demo
-num_thread_02="64" # number of threads for parallel execution
+#idx_end="1344"   
 
 
 #------- s0103 parameters ---------
@@ -51,6 +51,7 @@ nstop="5"        # early stopping criteria
 seed="1000"      # starting seed number
 
 
+# best parameter combo found based on step 2
 max_depth="6"            # max tree depth
 min_cw="10"              # min leaf weight
 eta="0.01"               # learning rate

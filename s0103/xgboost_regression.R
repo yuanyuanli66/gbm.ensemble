@@ -190,7 +190,7 @@ for (r in 1:nrepeats){
        # Get important features from the current model
        importance <- xgb.importance(feature_names=gene, model=bst)
        # write features to file 
-       out_file <- paste(out_loc,in_name,ext_name,"_rep",r,"_fld",f,"_feature.txt", sep="")
+       out_file <- paste(out_loc,'importantFeatures/',in_name,ext_name,"_rep",r,"_fld",f,"_feature.txt", sep="")
        write.table(importance, file=out_file, sep="\t", row.names=F, quote=F) 
 
        # combine test predictions together
