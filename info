@@ -3,7 +3,7 @@
 
 - Makefile file contains execution instructions for each step
 
-- All R programs reside in s01xx subfolders 
+- All programs reside in s01xx subfolders 
 
 - Input files reside in ./input subfolders
 
